@@ -18,6 +18,13 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
   	 ]
 
+users = [{:user_id => 'James T Kirk', :email => 'Jametkirk@federation.com', :session_token => '8765309'},
+         {:user_id => 'Dororthy Linn', :email => 'dorothy@hotmail.com', :session_token => 'theworldwonder'}
+  ]
+users.each do |user|
+  User.create!(user)
+end
+
 movies.each do |movie|
   Movie.create!(movie)
 end
