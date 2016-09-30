@@ -1,0 +1,11 @@
+%h1 Create New User
+
+= form_tag new_users_path, :method => :post do
+
+  = label :user, :user_id, 'User ID'
+  = text_field :user, 'title'
+  
+  = label :user, :email, 'Email'
+  = text_field :user, :email, 'email'
+  
+  = submit_tag 'Create my account'

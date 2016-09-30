@@ -5,12 +5,12 @@
     = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    = button_to 'Create User', user_path(@user), :method => :creat
 
 
   %body
     %h1.title Rotten Potatoes!
     #main
+      = button_to 'Sign-up/Login', new_user_path, :method => :create
       - if flash[:notice]
         #notice.message= flash[:notice]
       - elsif flash[:warning]
