@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
        flash[:notice] = "Sorry that user-id/email doesn't exist. Try again"
        redirect_to login_path
     else
+       flash[:notice] = "You are logged in as #{@user.user_id}"
        session[:session_token] = @user.session_token
        redirect_to movies_path
     end

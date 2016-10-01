@@ -17,6 +17,6 @@
       -if(!@current_user)
         = button_to 'Sign-up/Login', login_path, :method => :get, :id => 'signuplogin'
       -else
-        = flash[:notice] = "You are logged in as #{@current_user.user_id}"
+        - flash[:notice] = "You are logged in as #{@current_user.user_id}"
         = button_to 'Logout', logout_path, :method => :delete, :id => 'logout'
       = yield
